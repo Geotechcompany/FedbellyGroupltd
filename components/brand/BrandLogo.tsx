@@ -9,9 +9,9 @@ type BrandLogoProps = {
 };
 
 const sizes = {
-  sm: { mark: 28, text: "text-[15px]" },
-  md: { mark: 34, text: "text-base md:text-lg" },
-  lg: { mark: 44, text: "text-2xl md:text-3xl" },
+  sm: { mark: 28, name: "text-[15px]", legal: "text-[10px]" },
+  md: { mark: 34, name: "text-base md:text-lg", legal: "text-[10px] md:text-[11px]" },
+  lg: { mark: 48, name: "text-2xl md:text-3xl", legal: "text-xs md:text-sm" },
 } as const;
 
 /**
@@ -37,9 +37,15 @@ export function BrandLogo({
         style={{ width: s.mark, height: s.mark }}
         priority={size === "md" || size === "lg"}
       />
-      <span className={`brand-wordmark ${s.text} leading-tight`}>
-        Fed<span className="belly">belly</span>
-        <span className="text-ivory"> Group Limited</span>
+      <span className="flex min-w-0 flex-col leading-none">
+        <span className={`brand-wordmark ${s.name}`}>
+          Fed<span className="belly">belly</span>
+        </span>
+        <span
+          className={`mt-1 font-medium uppercase tracking-[0.12em] text-mist ${s.legal}`}
+        >
+          Group Limited
+        </span>
       </span>
     </>
   );
