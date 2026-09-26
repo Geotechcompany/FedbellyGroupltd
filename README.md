@@ -27,6 +27,10 @@ npm start
 
 XAMPP note: this is a Node/Next.js app. Run it with `npm run dev` or `npm start`, not as Apache PHP from the htdocs path. The project folder can live under XAMPP for organization.
 
+## Deploy
+
+Netlify: connect this GitHub repo; build settings are in `netlify.toml` (`@netlify/plugin-nextjs`, Node 20). Set any form/env vars in the Netlify UI if needed.
+
 ## Forms
 
 `POST /api/contact` validates and accepts contact, demo, waitlist, and careers inquiries.
