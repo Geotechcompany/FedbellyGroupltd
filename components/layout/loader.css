@@ -1,0 +1,108 @@
+/* From Uiverse.io by SelfMadeSystem — scoped with fb-loader- prefix */
+
+.fb-site-loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b0c10;
+  transition: opacity 350ms ease-out;
+}
+
+.fb-site-loader-overlay.is-exiting {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fb-loader-absolute {
+  position: absolute;
+}
+
+.fb-loader-inline-block {
+  display: inline-block;
+}
+
+.fb-loader {
+  display: flex;
+  margin: 0.25em 0;
+}
+
+.fb-loader-w-2 {
+  width: 0.5em;
+}
+
+.fb-loader-dash {
+  animation: fb-loader-dashArray 2s ease-in-out infinite,
+    fb-loader-dashOffset 2s linear infinite;
+}
+
+.fb-loader-spin {
+  animation: fb-loader-spinDashArray 2s ease-in-out infinite,
+    fb-loader-spin 8s ease-in-out infinite,
+    fb-loader-dashOffset 2s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes fb-loader-dashArray {
+  0% {
+    stroke-dasharray: 0 1 359 0;
+  }
+  50% {
+    stroke-dasharray: 0 359 1 0;
+  }
+  100% {
+    stroke-dasharray: 359 1 0 0;
+  }
+}
+
+@keyframes fb-loader-spinDashArray {
+  0% {
+    stroke-dasharray: 270 90;
+  }
+  50% {
+    stroke-dasharray: 0 360;
+  }
+  100% {
+    stroke-dasharray: 270 90;
+  }
+}
+
+@keyframes fb-loader-dashOffset {
+  0% {
+    stroke-dashoffset: 365;
+  }
+  100% {
+    stroke-dashoffset: 5;
+  }
+}
+
+@keyframes fb-loader-spin {
+  0% {
+    rotate: 0deg;
+  }
+  12.5%,
+  25% {
+    rotate: 270deg;
+  }
+  37.5%,
+  50% {
+    rotate: 540deg;
+  }
+  62.5%,
+  75% {
+    rotate: 810deg;
+  }
+  87.5%,
+  100% {
+    rotate: 1080deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fb-loader-dash,
+  .fb-loader-spin {
+    animation: none;
+  }
+}

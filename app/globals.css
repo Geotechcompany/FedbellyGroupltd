@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0b0c10;
+  --black: #000000;
+  --charcoal: #161821;
+  --graphite: #2e3340;
+  --mist: #9aa0ae;
+  --ivory: #f4f2ec;
+  --soft-white: #fbfaf7;
+  --mint: #98ffd8;
+  --mint-deep: #0d9b7a;
+  --lime: #c8f542;
+  --cyan: #2ee6d6;
+  --amber: #ffb020;
+  --coral: #ff4d6a;
+  --magenta: #e83e8c;
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--ink);
+  color: var(--ivory);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--mint) 35%, transparent);
+  color: var(--ivory);
+}
+
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 10000;
+  border-radius: 0.25rem;
+  background: var(--mint);
+  color: var(--ink);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.brand-wordmark {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ivory);
+}
+
+.brand-wordmark .belly {
+  color: var(--mint);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.scrim-hero {
+  background: linear-gradient(
+    105deg,
+    rgba(11, 12, 16, 0.92) 0%,
+    rgba(11, 12, 16, 0.72) 45%,
+    rgba(11, 12, 16, 0.35) 100%
+  );
+}
+
+.scrim-band {
+  background: linear-gradient(
+    to top,
+    rgba(11, 12, 16, 0.95) 0%,
+    rgba(11, 12, 16, 0.55) 55%,
+    rgba(11, 12, 16, 0.25) 100%
+  );
+}
+
+.atmosphere {
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(152, 255, 216, 0.08), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(46, 230, 214, 0.05), transparent 45%),
+    var(--ink);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
