@@ -120,19 +120,12 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
         </nav>
 
         <div className="mt-auto flex flex-col gap-3 pt-10">
-          <LinkButton href="/request-demo" variant="primary" onClick={onClose}>
-            Request a demo
-          </LinkButton>
-          <LinkButton href="/waitlist" variant="secondary" onClick={onClose}>
-            Join waitlist
-          </LinkButton>
-          <Link
-            href="/contact"
-            className="text-center text-sm text-mist hover:text-mint"
-            onClick={onClose}
-          >
+          <LinkButton href="/contact" variant="primary" onClick={onClose}>
             Contact
-          </Link>
+          </LinkButton>
+          <LinkButton href="/solutions" variant="secondary" onClick={onClose}>
+            Explore solutions
+          </LinkButton>
         </div>
       </div>
     </div>

@@ -31,7 +31,7 @@ export default function DistributionPage() {
         photo="waveform-photo"
         title="Distribution infrastructure"
         support="Package audio, art, and metadata for store delivery with a clear job status story."
-        ctas={<LinkButton href="/request-demo">Request a demo</LinkButton>}
+        ctas={<LinkButton href="/contact">Contact</LinkButton>}
       />
 
       <Section>
@@ -49,7 +49,7 @@ export default function DistributionPage() {
 
       <section className="relative min-h-[50vh] overflow-hidden">
         <Parallax speed={0.42} className="absolute inset-0">
-          <UnsplashImage photo="vinyl" fill className="object-cover" sizes="100vw" />
+          <UnsplashImage photo="clapper" fill className="object-cover" sizes="100vw" />
         </Parallax>
         <div className="absolute inset-0 scrim-band" />
         <div className="relative z-10 mx-auto flex min-h-[50vh] max-w-site items-end px-4 py-16 md:px-8">
@@ -59,7 +59,7 @@ export default function DistributionPage() {
               support="Wrong language flags, missing writers, or soft artwork kill street dates. Fedbelly treats checklist completion as part of the release, not an afterthought email."
             />
             <div className="mt-8">
-              <LinkButton href="/request-demo">Request a demo</LinkButton>
+              <LinkButton href="/contact">Contact</LinkButton>
             </div>
           </Reveal>
         </div>

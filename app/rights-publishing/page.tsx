@@ -35,7 +35,7 @@ export default function RightsPublishingPage() {
         photo="control-room"
         title="Rights and publishing"
         support="Protect recordings, register works, and stage sync pitches without losing the paper trail."
-        ctas={<LinkButton href="/contact">Talk to us</LinkButton>}
+        ctas={<LinkButton href="/contact">Contact</LinkButton>}
       />
 
       <Section>
@@ -82,7 +82,7 @@ export default function RightsPublishingPage() {
               support="Claims, registrations, and sync packs stay attached to the asset so the next manager inherits context."
             />
             <div className="mt-8">
-              <LinkButton href="/contact">Talk to us</LinkButton>
+              <LinkButton href="/contact">Contact</LinkButton>
             </div>
           </Reveal>
         </div>

@@ -16,8 +16,6 @@ const routes = [
   "/careers",
   "/faq",
   "/contact",
-  "/request-demo",
-  "/waitlist",
   "/blog",
   "/legal/terms",
   "/legal/privacy",

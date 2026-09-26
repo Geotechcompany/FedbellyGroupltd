@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "FAQ & Help | Fedbellygrouplimited",
   description:
-    "Answers about Fedbelly producer services, demos, waitlist, distribution, splits, and rights.",
+    "Answers about Fedbelly producer services, distribution, splits, rights, and how to get in touch.",
   path: "/faq",
 });
 
@@ -16,12 +16,12 @@ const faqs = [
   {
     question: "Is this website the product app?",
     answer:
-      "No. This is a marketing site. Request a demo or join the waitlist to talk about access.",
+      "No. This is a marketing showcase. Use Contact to ask about access or partnerships.",
   },
   {
     question: "Do I create an account here?",
     answer:
-      "No. There is no login on this site. Use Contact, Request a demo, or Join waitlist.",
+      "No. There is no login on this site. Use Contact to reach the team.",
   },
   {
     question: "Who is Fedbelly for?",
@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     question: "How do I get updates?",
-    answer: "Join waitlist or Contact. We reply with next steps.",
+    answer: "Contact us. We reply with next steps.",
   },
   {
     question: "Where are Terms and Privacy?",
@@ -95,12 +95,9 @@ export default function FaqPage() {
         </div>
         <div className="mt-12 flex flex-wrap gap-3">
           <LinkButton href="/contact">Contact</LinkButton>
-          <a
-            href="/request-demo"
-            className="inline-flex items-center justify-center rounded-md border border-ink/30 px-5 py-2.5 text-sm font-semibold text-ink transition-transform active:scale-[0.97] hover:border-mint-deep hover:text-mint-deep"
-          >
-            Request a demo
-          </a>
+          <LinkButton href="/solutions" variant="secondary">
+            Explore solutions
+          </LinkButton>
         </div>
       </Section>
     </>

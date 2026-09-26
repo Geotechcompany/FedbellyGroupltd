@@ -23,8 +23,8 @@ export default function AboutPage() {
         ctas={
           <>
             <LinkButton href="/contact">Contact</LinkButton>
-            <LinkButton href="/request-demo" variant="secondary">
-              Request a demo
+            <LinkButton href="/solutions" variant="secondary">
+              Explore solutions
             </LinkButton>
           </>
         }
@@ -53,12 +53,12 @@ export default function AboutPage() {
           <Reveal delay={0.1}>
             <SectionHeading
               title="How we work with you"
-              support="Start with a demo or waitlist conversation. We learn your release calendar and collaborator map, then show how Fedbelly capabilities fit. No account wall on this website."
+              support="Start with a Contact conversation. We learn your release calendar and collaborator map, then show how Fedbelly capabilities fit. No account wall on this website."
             />
             <div className="mt-8 flex flex-wrap gap-3">
               <LinkButton href="/contact">Contact</LinkButton>
-              <LinkButton href="/request-demo" variant="secondary">
-                Request a demo
+              <LinkButton href="/how-it-works" variant="secondary">
+                Learn more
               </LinkButton>
             </div>
           </Reveal>

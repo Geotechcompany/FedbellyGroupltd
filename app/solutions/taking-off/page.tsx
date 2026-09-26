@@ -26,7 +26,7 @@ export default function TakingOffPage() {
         photo="mixing-desk"
         title="Taking Off"
         support="More rooms, more features, more names on the split. Timing and locks matter."
-        ctas={<LinkButton href="/request-demo">Request a demo</LinkButton>}
+        ctas={<LinkButton href="/contact">Contact</LinkButton>}
       />
 
       <Section>
@@ -53,12 +53,12 @@ export default function TakingOffPage() {
               ))}
             </ul>
             <div className="mt-8">
-              <LinkButton href="/request-demo">Request a demo</LinkButton>
+              <LinkButton href="/contact">Contact</LinkButton>
             </div>
           </Reveal>
           <div className="relative aspect-[4/3] overflow-hidden">
             <UnsplashImage
-              photo="live-stage"
+              photo="studio-lights"
               fill
               className="object-cover"
               sizes="50vw"

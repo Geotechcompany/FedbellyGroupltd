@@ -14,7 +14,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Fedbellygrouplimited | Producer Services Platform",
   description:
-    "Production, distribution, rights, royalties, and project ops for artists, producers, managers, and labels. Request a demo.",
+    "Production, distribution, rights, royalties, and project ops for artists, producers, managers, and labels. Explore the showcase and get in touch.",
   path: "/",
 });
 
@@ -52,7 +52,7 @@ const capabilities = [
 const faqTeasers = [
   {
     q: "Is this website the product app?",
-    a: "No. This is a marketing site. Request a demo or join the waitlist to talk about access.",
+    a: "No. This is a marketing showcase. Use Contact to ask about access or partnerships.",
   },
   {
     q: "Who is Fedbelly for?",
@@ -75,9 +75,9 @@ export default function HomePage() {
         support="Briefs, deliveries, splits, DSP packaging, claims, and reporting for client and producer teams."
         ctas={
           <>
-            <LinkButton href="/request-demo">Request a demo</LinkButton>
-            <LinkButton href="/waitlist" variant="secondary">
-              Join waitlist
+            <LinkButton href="/contact">Contact</LinkButton>
+            <LinkButton href="/solutions" variant="secondary">
+              Explore solutions
             </LinkButton>
           </>
         }
@@ -153,7 +153,7 @@ export default function HomePage() {
               </p>
               <div className="mt-8">
                 <LinkButton href="/contact" variant="primary">
-                  Talk to us
+                  Contact
                 </LinkButton>
               </div>
             </div>
@@ -172,7 +172,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 gap-3">
             <div className="relative aspect-[4/5] overflow-hidden">
               <UnsplashImage
-                photo="live-stage"
+                photo="cinema-audience"
                 fill
                 className="object-cover"
                 sizes="300px"
@@ -181,7 +181,7 @@ export default function HomePage() {
             </div>
             <div className="relative mt-8 aspect-[4/5] overflow-hidden">
               <UnsplashImage
-                photo="studio-session"
+                photo="film-camera"
                 fill
                 className="object-cover"
                 sizes="300px"
@@ -223,9 +223,9 @@ export default function HomePage() {
               Ready to walk a release through Fedbelly?
             </h2>
             <div className="mt-8 flex flex-wrap gap-3">
-              <LinkButton href="/request-demo">Request a demo</LinkButton>
-              <LinkButton href="/contact" variant="secondary">
-                Contact
+              <LinkButton href="/contact">Contact</LinkButton>
+              <LinkButton href="/how-it-works" variant="secondary">
+                Learn more
               </LinkButton>
             </div>
           </div>

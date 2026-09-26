@@ -23,7 +23,7 @@ const posts: {
     title: "Lock the split before you book the street date",
     excerpt:
       "Why 97% sheets stall packaging, and how contributor locks save the week.",
-    photo: "vinyl",
+    photo: "clapper",
   },
   {
     title: "ISRC, UPC, and the metadata misses that kill delivery",
@@ -35,7 +35,7 @@ const posts: {
     title: "Claims without the inbox archaeology",
     excerpt:
       "Keep dispute notes on the asset so the next manager inherits context.",
-    photo: "control-room",
+    photo: "cinema-screen",
   },
 ];
 
@@ -74,7 +74,7 @@ export default function BlogPage() {
       </Stagger>
 
       <div className="mt-14">
-        <LinkButton href="/waitlist">Join waitlist for new notes</LinkButton>
+        <LinkButton href="/contact">Contact for updates</LinkButton>
       </div>
     </Section>
   );

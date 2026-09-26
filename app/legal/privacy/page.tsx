@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Privacy Summary | Fedbellygrouplimited",
   description:
-    "How the Fedbelly marketing site handles contact and waitlist form data.",
+    "How the Fedbelly marketing site handles contact form data.",
   path: "/legal/privacy",
 });
 
@@ -18,7 +18,7 @@ const sections = [
   },
   {
     title: "Why we collect it",
-    body: "Reply to inquiries, demos, waitlist updates.",
+    body: "Reply to inquiries and partnership notes.",
   },
   {
     title: "Storage",

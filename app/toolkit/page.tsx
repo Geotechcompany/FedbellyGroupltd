@@ -46,9 +46,9 @@ export default function ToolkitPage() {
         support="One project room for briefs, references, stems, masters, and sign-off."
         ctas={
           <>
-            <LinkButton href="/waitlist">Join waitlist</LinkButton>
-            <LinkButton href="/request-demo" variant="secondary">
-              Request a demo
+            <LinkButton href="/contact">Contact</LinkButton>
+            <LinkButton href="/how-it-works" variant="secondary">
+              Learn more
             </LinkButton>
           </>
         }
@@ -69,10 +69,10 @@ export default function ToolkitPage() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="relative aspect-square overflow-hidden">
-              <UnsplashImage photo="mixing-desk" fill className="object-cover" sizes="400px" width={800} />
+              <UnsplashImage photo="film-camera" fill className="object-cover" sizes="400px" width={800} />
             </div>
             <div className="relative aspect-square overflow-hidden sm:mt-10">
-              <UnsplashImage photo="collaboration" fill className="object-cover" sizes="400px" width={800} />
+              <UnsplashImage photo="studio-lights" fill className="object-cover" sizes="400px" width={800} />
             </div>
           </div>
           <Reveal>
@@ -81,9 +81,9 @@ export default function ToolkitPage() {
               support='When the master is Approved and Locked, distribution and split steps inherit that truth. You stop mailing "final_final_v7".'
             />
             <div className="mt-8 flex flex-wrap gap-3">
-              <LinkButton href="/waitlist">Join waitlist</LinkButton>
-              <LinkButton href="/request-demo" variant="secondary">
-                Request a demo
+              <LinkButton href="/contact">Contact</LinkButton>
+              <LinkButton href="/solutions" variant="secondary">
+                Explore solutions
               </LinkButton>
             </div>
           </Reveal>

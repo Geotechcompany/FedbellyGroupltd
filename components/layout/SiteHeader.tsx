@@ -91,13 +91,13 @@ export function SiteHeader() {
 
           <div className="hidden items-center gap-4 lg:flex">
             <Link
-              href="/contact"
+              href="/solutions"
               className="text-sm text-mist hover:text-mint"
             >
-              Contact
+              Explore solutions
             </Link>
-            <LinkButton href="/request-demo" variant="primary">
-              Request a demo
+            <LinkButton href="/contact" variant="primary">
+              Contact
             </LinkButton>
           </div>
 

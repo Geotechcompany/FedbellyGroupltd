@@ -40,7 +40,7 @@ export default function HowItWorksPage() {
         photo="control-room"
         title="How a release moves through Fedbelly"
         support="Four stages. Humans approve. Automation flags gaps."
-        ctas={<LinkButton href="/request-demo">Request a demo</LinkButton>}
+        ctas={<LinkButton href="/contact">Contact</LinkButton>}
       />
 
       <Section>
@@ -64,15 +64,15 @@ export default function HowItWorksPage() {
           <Reveal>
             <SectionHeading
               title="Who touches what"
-              support="Clients approve creative and commercial locks. Producers own delivery quality. Fedbelly ops (on the future product) QA catalog and delivery queues. This marketing site explains the model; you request access via demo or waitlist."
+              support="Clients approve creative and commercial locks. Producers own delivery quality. Fedbelly ops (on the future product) QA catalog and delivery queues. This marketing site explains the model; Contact us to talk about what fits your catalog."
             />
             <div className="mt-8">
-              <LinkButton href="/request-demo">Request a demo</LinkButton>
+              <LinkButton href="/contact">Contact</LinkButton>
             </div>
           </Reveal>
           <div className="relative aspect-[4/3] overflow-hidden">
             <UnsplashImage
-              photo="mixing-desk"
+              photo="camera-operator"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

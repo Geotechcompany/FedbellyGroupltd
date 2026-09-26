@@ -8,6 +8,12 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      { source: "/request-demo", destination: "/contact", permanent: true },
+      { source: "/waitlist", destination: "/contact", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

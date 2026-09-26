@@ -37,9 +37,9 @@ export default function AnalyticsRoyaltiesPage() {
         support="Money views that match the people who made the record."
         ctas={
           <>
-            <LinkButton href="/request-demo">Request a demo</LinkButton>
-            <LinkButton href="/waitlist" variant="secondary">
-              Join waitlist
+            <LinkButton href="/contact">Contact</LinkButton>
+            <LinkButton href="/solutions" variant="secondary">
+              Explore solutions
             </LinkButton>
           </>
         }
@@ -92,9 +92,9 @@ export default function AnalyticsRoyaltiesPage() {
               support="Stream, territory, and revenue views by release so client and producer scopes stay aligned."
             />
             <div className="mt-8 flex flex-wrap gap-3">
-              <LinkButton href="/request-demo">Request a demo</LinkButton>
-              <LinkButton href="/waitlist" variant="secondary">
-                Join waitlist
+              <LinkButton href="/contact">Contact</LinkButton>
+              <LinkButton href="/how-it-works" variant="secondary">
+                Learn more
               </LinkButton>
             </div>
           </Reveal>

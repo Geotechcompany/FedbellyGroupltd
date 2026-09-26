@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
 
-export type FormIntent = "contact" | "demo" | "waitlist" | "careers";
+export type FormIntent = "contact" | "careers";
 
 type InquiryFormProps = {
   intent: FormIntent;
@@ -74,7 +74,7 @@ export function InquiryForm({
       nextErrors.email = "Enter a valid email.";
     }
     if (!role) nextErrors.role = "Select a role.";
-    if (intent !== "waitlist" && !message) {
+    if (!message) {
       nextErrors.message = "Message is required.";
     }
     if (Object.keys(nextErrors).length) {
@@ -278,7 +278,7 @@ export function InquiryForm({
 
       <div className="flex flex-col gap-2">
         <label htmlFor="message" className={labelClass}>
-          {intent === "waitlist" ? "Message (optional)" : "Message"}
+          Message
         </label>
         <textarea
           id="message"
@@ -293,9 +293,7 @@ export function InquiryForm({
           </p>
         ) : (
           <p className={helperClass}>
-            {intent === "waitlist"
-              ? "Optional note about your catalog or timing."
-              : "Tell us the release problem you want solved."}
+            Tell us the release problem you want solved.
           </p>
         )}
       </div>

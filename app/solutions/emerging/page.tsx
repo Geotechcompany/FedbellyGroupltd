@@ -26,7 +26,7 @@ export default function EmergingPage() {
         photo="collaboration"
         title="Emerging"
         support="You are shipping early catalog with a small circle. You need clarity more than ceremony."
-        ctas={<LinkButton href="/waitlist">Join waitlist</LinkButton>}
+        ctas={<LinkButton href="/contact">Contact</LinkButton>}
       />
 
       <Section>
@@ -61,7 +61,7 @@ export default function EmergingPage() {
               ))}
             </ul>
             <div className="mt-8">
-              <LinkButton href="/waitlist">Join waitlist</LinkButton>
+              <LinkButton href="/contact">Contact</LinkButton>
             </div>
           </Reveal>
         </div>

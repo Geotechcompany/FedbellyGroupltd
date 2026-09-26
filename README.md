@@ -33,7 +33,7 @@ Netlify: connect this GitHub repo; build settings are in `netlify.toml` (`@netli
 
 ## Forms
 
-`POST /api/contact` validates and accepts contact, demo, waitlist, and careers inquiries.
+`POST /api/contact` validates and accepts contact and careers inquiries.
 
 - Without env keys: logs payload in the server console and returns success (demo mode).
 - Optional: set `CONTACT_FORM_ENDPOINT` (Formspree or similar) to forward submissions.

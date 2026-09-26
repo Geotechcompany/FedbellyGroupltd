@@ -24,14 +24,14 @@ export default function NextLevelPage() {
   return (
     <>
       <SectionHero
-        photo="live-stage"
+        photo="cinema-screen"
         title="Next Level"
         support="Catalog volume and partner complexity. You need ops discipline without losing studio speed."
         ctas={
           <>
-            <LinkButton href="/request-demo">Request a demo</LinkButton>
-            <LinkButton href="/contact" variant="secondary">
-              Talk to us
+            <LinkButton href="/contact">Contact</LinkButton>
+            <LinkButton href="/solutions" variant="secondary">
+              Explore solutions
             </LinkButton>
           </>
         }
@@ -71,9 +71,9 @@ export default function NextLevelPage() {
                 Ops for catalogs that do not sleep
               </h2>
               <div className="mt-8 flex flex-wrap gap-3">
-                <LinkButton href="/request-demo">Request a demo</LinkButton>
-                <LinkButton href="/contact" variant="secondary">
-                  Talk to us
+                <LinkButton href="/contact">Contact</LinkButton>
+                <LinkButton href="/about" variant="secondary">
+                  Learn more
                 </LinkButton>
               </div>
             </div>

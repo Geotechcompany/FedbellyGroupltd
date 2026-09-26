@@ -5,11 +5,13 @@ import type { UnsplashKey } from "@/lib/unsplash";
 
 const portraits: UnsplashKey[] = [
   "artist-portrait",
-  "artist-portrait-2",
-  "artist-portrait-3",
-  "live-stage",
+  "camera-operator",
   "studio-session",
+  "cinema-audience",
+  "studio-lights",
+  "clapper",
   "collaboration",
+  "live-stage",
 ];
 
 export function CreatorStrip({ label }: { label: string }) {

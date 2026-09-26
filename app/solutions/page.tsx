@@ -19,7 +19,7 @@ export default function SolutionsPage() {
   return (
     <>
       <SectionHero
-        photo="live-stage"
+        photo="cinema-audience"
         title="Solutions by career stage"
         support="Same producer services story. Different operating weight."
         ctas={<LinkButton href="/contact">Contact</LinkButton>}
