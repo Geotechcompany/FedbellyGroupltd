@@ -29,6 +29,15 @@ export function SiteLoader() {
 
     const started = performance.now();
 
+    // Sync with inline hard-fallback if it already dismissed
+    const existing = document.getElementById("fb-site-loader");
+    if (existing?.dataset.done === "1") {
+      finishedRef.current = true;
+      setExiting(true);
+      schedule(() => setVisible(false), EXIT_MS);
+      return clearTimers;
+    }
+
     const dismiss = () => {
       if (finishedRef.current) return;
       finishedRef.current = true;
