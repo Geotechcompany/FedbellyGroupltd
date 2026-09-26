@@ -42,7 +42,7 @@ export function BrandLogo({
           Fed<span className="belly">belly</span>
         </span>
         <span
-          className={`mt-1 font-medium uppercase tracking-[0.12em] text-mist ${s.legal}`}
+          className={`mt-1 font-medium tracking-[0.04em] text-mist ${s.legal}`}
         >
           Group Limited
         </span>
