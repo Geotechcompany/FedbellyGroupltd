@@ -1,86 +1,88 @@
 /**
- * Unsplash photo IDs pinned for Fedbellygrouplimited.
- * Queries from SITE-BUILD-PROMPT.md §4. IDs verified against Unsplash CDN.
+ * Unsplash photography for Fedbellygrouplimited.
+ * Local copies live in public/images/unsplash/ so next/image never
+ * fetches remote Unsplash over TLS (avoids local cert/AV interception failures).
+ * Source IDs documented for attribution; originals from images.unsplash.com.
  */
 export const unsplash = {
   // studio-session — recording studio / producer desk
   "studio-session": {
     id: "1598488035139-bdbb2231ce04",
-    url: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04",
+    src: "/images/unsplash/studio-session.jpg",
     alt: "Recording studio session : Fedbelly producer collaboration context",
   },
-  // mixing-desk — mixing console faders
+  // mixing-desk — mixing console / studio board
   "mixing-desk": {
-    id: "1598650320219-bea4b6f76c9a",
-    url: "https://images.unsplash.com/photo-1598650320219-bea4b6f76c9a",
+    id: "1511379938547-c1f69419868d",
+    src: "/images/unsplash/mixing-desk.jpg",
     alt: "Mixing console faders : Fedbelly toolkit and delivery workflow",
   },
   // headphones
   headphones: {
-    id: "1484704849709-b94519863034",
-    url: "https://images.unsplash.com/photo-1484704849709-b94519863034",
+    id: "1478737270239-2f02b77fc618",
+    src: "/images/unsplash/headphones.jpg",
     alt: "Studio headphones : Fedbelly analytics and listening context",
   },
   // live-stage
   "live-stage": {
-    id: "1470229722913-7c0e2dbb8d4c",
-    url: "https://images.unsplash.com/photo-1470229722913-7c0e2dbb8d4c",
+    id: "1514525253161-7a46d19cd819",
+    src: "/images/unsplash/live-stage.jpg",
     alt: "Live concert stage lights : Fedbelly Next Level operations",
   },
   // vinyl
   vinyl: {
     id: "1511671782779-c97d3d27a1d4",
-    url: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4",
+    src: "/images/unsplash/vinyl.jpg",
     alt: "Vinyl record on turntable : Fedbelly about and catalog story",
   },
   // city-night
   "city-night": {
     id: "1514565131-fce0801e5785",
-    url: "https://images.unsplash.com/photo-1514565131-fce0801e5785",
+    src: "/images/unsplash/city-night.jpg",
     alt: "City night skyline : Fedbelly catalog work across territories",
   },
   // collaboration
   collaboration: {
     id: "1522071820081-009f0129c71c",
-    url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    src: "/images/unsplash/collaboration.jpg",
     alt: "Creative collaboration at a table : Fedbelly Emerging solutions",
   },
-  // waveform-photo — DAW / waveform screen
+  // waveform-photo — music / listening visual
   "waveform-photo": {
-    id: "1619983081563-430f63602799",
-    url: "https://images.unsplash.com/photo-1619983081563-430f63602799",
+    id: "1614149162883-504ce4d13909",
+    src: "/images/unsplash/waveform-photo.jpg",
     alt: "Audio waveform on screen : Fedbelly distribution packaging",
   },
   // control-room
   "control-room": {
-    id: "1571330735066-03ccc943bce3",
-    url: "https://images.unsplash.com/photo-1571330735066-03ccc943bce3",
+    id: "1557672172-298e090bd0f1",
+    src: "/images/unsplash/control-room.jpg",
     alt: "Music control room : Fedbelly rights and release workflow",
   },
   // artist portraits for creator strip
   "artist-portrait": {
     id: "1493225457124-a3eb161ffa5f",
-    url: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f",
+    src: "/images/unsplash/artist-portrait.jpg",
     alt: "Musician portrait under stage light : Fedbelly creator strip",
   },
   "artist-portrait-2": {
-    id: "1516280447641-f581d0e6b6e0",
-    url: "https://images.unsplash.com/photo-1516280447641-f581d0e6b6e0",
+    id: "1524368535928-5b5e00ddc76b",
+    src: "/images/unsplash/artist-portrait-2.jpg",
     alt: "Performer with guitar : Fedbelly creator strip",
   },
   "artist-portrait-3": {
-    id: "1501386761575-b6c8760454f8",
-    url: "https://images.unsplash.com/photo-1501386761575-b6c8760454f8",
+    id: "1470225620780-dba8ba36b745",
+    src: "/images/unsplash/artist-portrait-3.jpg",
     alt: "Live performer with mic : Fedbelly creator strip",
   },
 } as const;
 
 export type UnsplashKey = keyof typeof unsplash;
 
+/** Local public path for next/image (no remote TLS fetch). */
 export function unsplashSrc(
   key: UnsplashKey,
-  { w = 2400, q = 80 }: { w?: number; q?: number } = {},
+  _opts?: { w?: number; q?: number },
 ) {
-  const photo = unsplash[key];
-  return `${photo.url}?auto=format&fit=crop&w=${w}&q=${q}`;
+  return unsplash[key].src;
 }

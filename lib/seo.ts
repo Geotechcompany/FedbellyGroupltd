@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { brand } from "./brand";
 import { unsplashSrc } from "./unsplash";
 
-const defaultOgImage = unsplashSrc("studio-session", { w: 1200 });
-
 export function absoluteUrl(path = "/") {
   const base = brand.siteUrl.replace(/\/$/, "");
   if (!path || path === "/") return base;
   return `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }
+
+const defaultOgImage = absoluteUrl(unsplashSrc("studio-session"));
 
 type PageSeo = {
   title: string;

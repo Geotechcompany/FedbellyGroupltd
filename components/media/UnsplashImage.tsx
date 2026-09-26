@@ -1,19 +1,13 @@
 import Image, { type ImageProps } from "next/image";
 import { unsplash, type UnsplashKey, unsplashSrc } from "@/lib/unsplash";
 
-type UnsplashImageProps = Omit<ImageProps, "src" | "alt" | "unoptimized"> & {
+type UnsplashImageProps = Omit<ImageProps, "src" | "alt"> & {
   photo: UnsplashKey;
   alt?: string;
   width?: number;
   quality?: number;
 };
 
-/**
- * Unsplash photos via next/image with `unoptimized` always on.
- * Remote Unsplash URLs must not go through `/_next/image` on this host —
- * Node TLS fails with UNABLE_TO_VERIFY_LEAF_SIGNATURE when fetchExternalImage
- * tries to pull images.unsplash.com.
- */
 export function UnsplashImage({
   photo,
   alt,
@@ -25,7 +19,7 @@ export function UnsplashImage({
   ...props
 }: UnsplashImageProps) {
   const meta = unsplash[photo];
-  const src = unsplashSrc(photo, { w: width, q: quality });
+  const src = unsplashSrc(photo);
 
   if (fill) {
     return (
@@ -34,9 +28,9 @@ export function UnsplashImage({
         alt={alt || meta.alt}
         fill
         sizes={sizes}
+        quality={quality}
         className={className}
         {...props}
-        unoptimized
       />
     );
   }
@@ -48,9 +42,9 @@ export function UnsplashImage({
       width={width}
       height={Math.round(width * 0.66)}
       sizes={sizes}
+      quality={quality}
       className={className}
       {...props}
-      unoptimized
     />
   );
 }

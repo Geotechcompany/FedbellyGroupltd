@@ -68,7 +68,6 @@ export default function HomePage() {
   return (
     <>
       <SectionHero
-        brandFirst
         parallax
         priority
         photo="studio-session"
